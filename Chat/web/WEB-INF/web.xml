@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+
+    <servlet>
+        <servlet-name>data</servlet-name>
+        <servlet-class>chat.dataServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>data</servlet-name>
+        <url-pattern>/dataServlet/*</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>chatroom</servlet-name>
+        <jsp-file>/chat_client.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>chatroom</servlet-name>
+        <url-pattern>/room/*</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>Board</servlet-name>
+        <servlet-class>chat.BoardServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Board</servlet-name>
+        <url-pattern>/Board/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DB_user</servlet-name>
+        <servlet-class>chat.UserServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>DB_user</servlet-name>
+        <url-pattern>/user/*</url-pattern>
+    </servlet-mapping>
+
+
+
+
+
+</web-app>
